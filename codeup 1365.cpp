@@ -14,6 +14,9 @@ int main()
 			arr[i][0]='*';
 			arr[a-1][j]='*';
 			arr[i][a-1]='*';
+			arr[a/2][j]='*';
+			arr[i][a/2]='*';
+
 			i++;
 			j++;
 		if(i==j)
