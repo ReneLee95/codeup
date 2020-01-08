@@ -1,24 +1,39 @@
-#include <stdio.h>
+#include <iostream>
+#include <algorithm>
+#include <vector>
+
+using namespace std;
 
 int main()
 {
-    int a,b=0;
-    int k=1;
-    int s=10;
-    int arr[100]={0,};
-    scanf("%d %d",&a,&b);
-    for(int i=0; i<b; i++)
-    {
-        if(i%2==0)
-        {
-            arr[i]=k;
-            k++;
-        }
-        else
-        {
-            arr[i]=s;
-            s+=10;
-        }
-    }
-    printf("%d",arr[a-1]+arr[b-1]);
+	int num1,num2;
+	int count = 1;
+	int count2 = 1;
+	int k = 0;
+	cin>>num1>>num2;
+	
+	vector<int> vector;
+	
+	vector.push_back(0);
+	
+	for(int i =1; i<10000000; i++)
+	{
+		k = 0;
+		if(i%2==0)
+		{
+			k = count*10;
+			vector.push_back(k);
+			count++;
+		}
+		else
+		{
+			k = count2;
+			vector.push_back(k);
+			count2++;
+		}
+	}
+	
+	int result = vector[num1] + vector[num2];
+	
+	cout<<result;
 }
